@@ -31,14 +31,15 @@ export function Listproduct(props) {
             </thead>
             <tbody>
               {products.map(prod => (
-                <tr key={prod.ProductId}>
-                  <td>{prod.ProductName}</td>
-                  <td>{prod.CategoryId}</td>
-                  <td>{prod.CategoryName}</td>
+                <tr key={prod.productId}>
+                  <td>{prod.productId}</td>
+                  <td>{prod.productName}</td>
+                  <td>{prod.categoryId}</td>
+                  <td>{prod.categoryName}</td>
                   
-                  <td><a href= {"/Editprod/"+prod.ProductId}>Edit</a></td>
-                  <td><a href= {"/Displayprod/"+prod.ProductId}>Display</a></td>
-                  <td><a href= {"/Deleteprod/"+prod.ProductId}>Delete</a></td>
+                  <td><a href= {"/Editprod/"+prod.productId}>Edit</a></td>
+                  <td><a href= {"/Displayprod/"+prod.productId}>Display</a></td>
+                  <td><a href= {"/Deleteprod/"+prod.productId}>Delete</a></td>
               
                 </tr>
               ))}

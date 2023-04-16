@@ -31,27 +31,27 @@ function Addprod() {
     return (
         <form onSubmit={handleSubmit}>
                       
-            <label>ProductName:</label>
+            <label>productName:</label>
             <input
                 type="text"
-                name="ProductName"
-                value={ prod.ProductName || ""}
+                name="productName"
+                value={ prod.productName || ""}
                 onChange={handleChange}
             />
             <br />            
-            <label>CategoryId:</label>
+            <label>categoryId:</label>
             <input
                 type="text"
-                name="CategoryId"
-                value={ prod.CategoryId|| ""}
+                name="categoryId"
+                value={ prod.categoryId|| ""}
                 onChange={handleChange}
             />
             <br />     
-            <label>CategoryName:</label>
+            <label>categoryName:</label>
             <input
                 type="text"
-                name="CategoryName"
-                value={ prod.CategoryName|| ""}
+                name="categoryName"
+                value={ prod.categoryName|| ""}
                 onChange={handleChange}
             />
             <br />                

@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 export default function Editprod() {
     const [prod, setProd] = useState({});
-    const { ProductId } = useParams();
+    const { productId } = useParams();
     let navigate = useNavigate();
     useEffect(() => {
-        fetch("https://localhost:7198/API/Nimaps/" + ProductId)
+        fetch("https://localhost:7198/API/Nimaps/" + productId)
             .then(res => res.json())
             .then((result) => {
                 setProd(result);
@@ -21,7 +21,7 @@ export default function Editprod() {
     const handleSubmit = (e) => {
         let demo = JSON.stringify(prod);
         console.log(JSON.parse(demo));
-        fetch("https://localhost:7198/API/Nimaps/" + ProductId, {
+        fetch("https://localhost:7198/API/Nimaps/" + productId, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },
             body: demo
@@ -33,33 +33,33 @@ export default function Editprod() {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <label>ProductId:</label>
+            <label>productId:</label>
             <input
                 type="text"
-                name="ProductId"
-                value={prod.ProductId || ""}
+                name="productId"
+                value={prod.productId || ""}
                 onChange={handleChange}
             />
-            <br />            <label>ProductName:</label>
+            <br />            <label>productName:</label>
             <input
                 type="text"
-                name="ProductName"
-                value={prod.ProductName || ""}
+                name="productName"
+                value={prod.productName || ""}
                 onChange={handleChange}
             />
-            <br />            <label>CategoryId:</label>
+            <br />            <label>categoryId:</label>
             <input
                 type="text"
-                name="CategoryId"
-                value={prod.CategoryId || ""}
+                name="categoryId"
+                value={prod.categoryId || ""}
                 onChange={handleChange}
             />
             <br />            
-            <label>CategoryName:</label>
+            <label>categoryName:</label>
             <input
                 type="text"
-                name="CategoryName"
-                value={prod.CategoryName || ""}
+                name="categoryName"
+                value={prod.categoryName || ""}
                 onChange={handleChange}
             />
             <br />        

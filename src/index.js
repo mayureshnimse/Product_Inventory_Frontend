@@ -23,9 +23,9 @@ root.render(
         <Route path="Contactus" element={<Contactus />} />
        <Route path="Listproduct" element={ <Listproduct />} />
        
-        <Route path="/Displayprod/:ProductId" element={<Displayprod/>} />
-        <Route path="/Editprod/:ProductId" element={<Editprod/>} />
-        <Route path="/Deleteprod/:ProductId" element={<Deleteprod/>} />
+        <Route path="/Displayprod/:productId" element={<Displayprod/>} />
+        <Route path="/Editprod/:productId" element={<Editprod/>} />
+        <Route path="/Deleteprod/:productId" element={<Deleteprod/>} />
         <Route path="/Addprod/" element={<Addprod/>} />
         <Route path="*" element={<Nopage />} />
         </Route>
