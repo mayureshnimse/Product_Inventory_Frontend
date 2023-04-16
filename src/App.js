@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import {Outlet,Link, useNavigate } from "react-router-dom";
 
+  
 function App() {
+ const [isloggedin,setLoggedin]=useState(null);
+ const [readval,setVal]=useState(" ");
+ const handeldata=(event)=>{
+    setVal(event.target.value);
+ };
+ const navigate=useNavigate();
+   const check= (event)=>{
+   if (event.target.value==="LoggedIn"){
+   const data={readval};
+    sessionStorage.setItem("key",JSON.stringify(data))
+     setVal(" ");
+  setLoggedin(true)
+   }
+ else 
+ {
+  sessionStorage.setItem("key","")
+    setLoggedin(false)
+   navigate("/");
+ }
+}
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <nav>
+        <ul>
+          <li>     <Link to="/Home">Home</Link> </li>
+          <li>     <Link to="/Contactus">Contactus</Link> </li>
+          <li>     <Link to="/Listproduct">Listproduct</Link> </li>
+          <li>     <Link to="/Addprod">Addprod</Link> </li>
+        </ul>
+      </nav>
+      
+      <Outlet />
+        
+     </div>
+
   );
 }
 
