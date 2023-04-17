@@ -2,7 +2,7 @@ function Contactus(){
     return(
           <div>
             <h1>
-                       NIMAP INFOTECH Contact Details
+            Contact Details
             </h1>
           </div>
     )

@@ -22,10 +22,10 @@ export function Listproduct(props) {
           <table>
             <thead>
               <tr>
-                <th>ProductId</th>
-                <th>ProductName</th>
-                <th>CategoryId</th>
-                <th>CategoryName</th>
+                <th>ProductId<hr/></th>
+                <th>ProductName<hr/></th>
+                <th>CategoryId<hr/></th>
+                <th>CategoryName<hr/></th>
                
               </tr>
             </thead>
@@ -36,7 +36,7 @@ export function Listproduct(props) {
                   <td>{prod.productName}</td>
                   <td>{prod.categoryId}</td>
                   <td>{prod.categoryName}</td>
-                  
+                  <hr/>
                   <td><a href= {"/Editprod/"+prod.productId}>Edit</a></td>
                   <td><a href= {"/Displayprod/"+prod.productId}>Display</a></td>
                   <td><a href= {"/Deleteprod/"+prod.productId}>Delete</a></td>

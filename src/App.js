@@ -30,8 +30,8 @@ function App() {
         <ul>
           <li>     <Link to="/Home">Home</Link> </li>
           <li>     <Link to="/Contactus">Contactus</Link> </li>
-          <li>     <Link to="/Listproduct">Listproduct</Link> </li>
-          <li>     <Link to="/Addprod">Addprod</Link> </li>
+          <li>     <Link to="/Listproduct">List of Products</Link> </li>
+          <li>     <Link to="/Addprod">Add Product</Link> </li>
         </ul>
       </nav>
       

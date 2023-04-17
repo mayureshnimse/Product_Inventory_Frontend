@@ -2,7 +2,7 @@ function Home(){
     return(
             <div>
                     <h1>
-                            Home Page of NIMAP INFOTECH
+                Welcome to our Home Page
                     </h1>
                     
             </div>

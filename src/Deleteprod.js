@@ -25,7 +25,7 @@ export default function Deleteprod() {
     }
     return (
         <div>
-            <h1>Are you sure?</h1>
+            <h1>Are you sure to delete?</h1>
             <table border="5">
                 <thead>
                     <tr>
@@ -46,7 +46,7 @@ export default function Deleteprod() {
                     </tr>
                 </tbody>
             </table>
-            <form>
+            <form><br />
                 <button onClick={handledelete}>Delete</button>
             </form>
         </div>
