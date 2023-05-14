@@ -34,6 +34,13 @@ function App() {
           <li>     <Link to="/Addprod">Add Product</Link> </li>
         </ul>
       </nav>
+
+      <span><input type="text" value={readval} onInput={handeldata}/></span>
+      {isloggedin?      
+        <button  onClick={check} value="LoggedOut">LoggedOut</button>
+      :
+      <button onClick={check} value="LoggedIn">LoggedIn</button>
+      }
       
       <Outlet />
         

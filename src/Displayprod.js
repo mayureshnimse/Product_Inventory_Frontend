@@ -7,7 +7,7 @@ export default function Displayprod() {
     console.log(useParams());
     useEffect(() => {
         
-        fetch("https://localhost:7198/API/Nimaps/" + productId)
+        fetch("https://localhost:7119/api/Products/" + productId)
             .then(res => res.json())
             .then((result) => { setProd(result);
             

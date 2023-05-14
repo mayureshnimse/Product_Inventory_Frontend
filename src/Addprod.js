@@ -18,7 +18,7 @@ function Addprod() {
     const handleSubmit = (e) => {
         let demo = JSON.stringify(prod);
         console.log(JSON.parse(demo));
-        fetch("https://localhost:7198/API/Nimaps/" , {
+        fetch("https://localhost:7119/api/Products/" , {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: demo

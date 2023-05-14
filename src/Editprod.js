@@ -6,7 +6,7 @@ export default function Editprod() {
     const { productId } = useParams();
     let navigate = useNavigate();
     useEffect(() => {
-        fetch("https://localhost:7198/API/Nimaps/" + productId)
+        fetch("https://localhost:7119/api/Products/" + productId)
             .then(res => res.json())
             .then((result) => {
                 setProd(result);
@@ -21,7 +21,7 @@ export default function Editprod() {
     const handleSubmit = (e) => {
         let demo = JSON.stringify(prod);
         console.log(JSON.parse(demo));
-        fetch("https://localhost:7198/API/Nimaps/" + productId, {
+        fetch("https://localhost:7119/api/Products/" + productId, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },
             body: demo

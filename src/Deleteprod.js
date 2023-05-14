@@ -6,14 +6,14 @@ export default function Deleteprod() {
     const { productId } = useParams();
     let navigate = useNavigate();
     useEffect(() => {
-        fetch("https://localhost:7198/API/Nimaps/" + productId)
+        fetch("https://localhost:7119/api/Products/" + productId)
             .then(res => res.json())
             .then((result) => { setProd(result); }
             );
     }, {});
     const handledelete = (event) => {
         alert(productId);
-        fetch("https://localhost:7198/API/Nimaps/" + productId,
+        fetch("https://localhost:7119/api/Products/" + productId,
             {
                 method: 'Delete'
             })

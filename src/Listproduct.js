@@ -11,7 +11,7 @@ export function Listproduct(props) {
      {
       navigate("/");
      }
-        fetch("https://localhost:7198/API/Nimaps/")
+        fetch("https://localhost:7119/api/Products/")
             .then(res => res.json())
             .then((result) => { setProduct(result); }
             );
